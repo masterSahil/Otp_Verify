@@ -48,7 +48,7 @@ module.exports.verifyOtp = async (req, res) => {
         const otpData = await OtpSchema.findOne({phoneNumber, otp});
 
         if (!otpData) {
-            return res.status(400).json({
+            return res.status(501).json({
                 success: false,
                 message: "You Have Entered Wrong Otp",
             })
@@ -57,7 +57,7 @@ module.exports.verifyOtp = async (req, res) => {
         const isOtpExpired = await otpVarification(otpData.otpExpiry);
 
         if (isOtpExpired) {
-            return res.status(400).json({
+            return res.status(501).json({
                 success: false,
                 msg: "Your Otp Has Been Expired",
             })
