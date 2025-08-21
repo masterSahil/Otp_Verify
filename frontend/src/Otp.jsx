@@ -15,7 +15,7 @@ export default function PhoneNumberVerification() {
 
     try {
       // API call to backend to send OTP
-      const response = await fetch("http://localhost:3000/send-otp", {
+      const response = await fetch("https://otp-verify-tvs8.onrender.com/send-otp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
