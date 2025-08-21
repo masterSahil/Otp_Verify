@@ -48,7 +48,7 @@ module.exports.verifyOtp = async (req, res) => {
         const otpData = await OtpSchema.findOne({phoneNumber, otp});
 
         if (!otpData) {
-            res.status(400).json({
+            return res.status(400).json({
                 success: false,
                 message: "You Have Entered Wrong Otp",
             })
