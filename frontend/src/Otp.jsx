@@ -15,7 +15,7 @@ export default function PhoneNumberVerification() {
 
     try {
       // API call to backend to send OTP
-      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/send-otp`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/send-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

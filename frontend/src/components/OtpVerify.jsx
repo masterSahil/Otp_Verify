@@ -13,8 +13,9 @@ const OTPVerification = () => {
   const [canResend, setCanResend] = useState(false);
 
   // Base URL for your backend
-  const API_BASE_URL = import.meta.env.REACT_APP_API_URL; // Update this to your backend URL
+  const API_BASE_URL = import.meta.env.VITE_API_URL; // Update this to your backend URL
 
+  console.log(API_BASE_URL);
   // Timer for resend OTP
   useEffect(() => {
     if (timer > 0) {
