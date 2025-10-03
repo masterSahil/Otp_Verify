@@ -24,7 +24,7 @@ module.exports.sendOtp = async (req, res) => {
         )
 
         await twilioClient.messages.create({
-            body: `Otp: ${otp}`,
+            body: `Your Verfication Otp is ${otp}`,
             to: phoneNumber, 
             from: process.env.TWILIO_PHONE_NUMBER,
         })

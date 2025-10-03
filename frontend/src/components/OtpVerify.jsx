@@ -13,7 +13,7 @@ const OTPVerification = () => {
   const [canResend, setCanResend] = useState(false);
 
   // Base URL for your backend
-  const API_BASE_URL = 'https://otp-verify-tvs8.onrender.com'; // Update this to your backend URL
+  const API_BASE_URL = import.meta.env.REACT_APP_API_URL; // Update this to your backend URL
 
   // Timer for resend OTP
   useEffect(() => {
